@@ -1,0 +1,1121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f5f5f5;
+
+    color: #111111;
+}
+
+
+.admin-layout {
+    display: grid;
+
+    grid-template-columns: 260px 1fr;
+
+    min-height: 100vh;
+}
+
+
+/* SIDEBAR */
+
+.admin-sidebar {
+    position: sticky;
+
+    top: 0;
+
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px 25px;
+
+    background-color: #111111;
+    color: white;
+}
+
+
+.admin-logo {
+    margin-bottom: 50px;
+}
+
+
+.admin-logo a {
+    display: block;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.admin-logo span {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #888888;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+
+.admin-menu {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.admin-menu a {
+    padding: 13px 15px;
+
+    color: #bbbbbb;
+
+    text-decoration: none;
+}
+
+
+.admin-menu a:hover {
+    background-color: #222222;
+
+    color: white;
+}
+
+
+.admin-sidebar-footer {
+    margin-top: auto;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #333333;
+}
+
+
+.admin-sidebar-footer p {
+    margin-bottom: 10px;
+}
+
+
+.admin-sidebar-footer a {
+    color: #aaaaaa;
+
+    font-size: 14px;
+}
+
+
+/* CONTENIDO */
+
+.admin-main {
+    padding: 50px;
+}
+
+
+.admin-cabecera {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 40px;
+}
+
+
+.admin-cabecera p {
+    margin-bottom: 5px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.admin-cabecera h1 {
+    font-size: 38px;
+}
+
+
+.admin-cabecera>span {
+    color: #666666;
+}
+
+
+/* TARJETAS */
+
+.admin-estadisticas {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.admin-card {
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 190px;
+
+    padding: 25px;
+
+    background-color: white;
+
+    border: 1px solid #e0e0e0;
+}
+
+
+.admin-card>span {
+    margin-bottom: 20px;
+
+    color: #666666;
+
+    font-size: 14px;
+}
+
+
+.admin-card strong {
+    margin-bottom: 25px;
+
+    font-size: 42px;
+}
+
+
+.admin-card a {
+    margin-top: auto;
+
+    color: #111111;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* PANELES */
+
+.admin-panel {
+    background-color: white;
+
+    border: 1px solid #e0e0e0;
+}
+
+
+.admin-btn-principal {
+    display: inline-block;
+
+    padding: 13px 20px;
+
+    background-color: #111111;
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.admin-btn-principal:hover {
+    background-color: #333333;
+}
+
+
+.admin-mensaje {
+    margin-bottom: 25px;
+
+    padding: 15px 20px;
+
+    background-color: white;
+
+    border: 1px solid #dddddd;
+}
+
+
+/* TABLA */
+
+.admin-tabla-contenedor {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+.admin-tabla {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 950px;
+}
+
+
+.admin-tabla th,
+.admin-tabla td {
+    padding: 18px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.admin-tabla th {
+    background-color: #fafafa;
+
+    color: #666666;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.admin-producto {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.admin-producto img {
+    width: 60px;
+    height: 75px;
+
+    object-fit: cover;
+}
+
+
+.admin-producto div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.admin-producto span {
+    color: #888888;
+
+    font-size: 12px;
+}
+
+
+/* ESTADOS */
+
+.admin-estado {
+    display: inline-block;
+
+    padding: 7px 10px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.estado-activo {
+    background-color: #eeeeee;
+
+    color: #111111;
+}
+
+
+.estado-inactivo {
+    background-color: #222222;
+
+    color: white;
+}
+
+
+/* ACCIONES */
+
+.admin-acciones {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.admin-acciones a,
+.admin-btn-link {
+    color: #111111;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    text-decoration: underline;
+}
+
+
+.admin-btn-link {
+    padding: 0;
+
+    border: none;
+
+    background: none;
+
+    cursor: pointer;
+}
+
+/* FORMULARIOS ADMIN */
+
+.admin-btn-secundario {
+    padding: 12px 18px;
+
+    border: 1px solid #111111;
+
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.admin-form-panel {
+    max-width: 1000px;
+
+    padding: 35px;
+
+    background-color: white;
+
+    border: 1px solid #e0e0e0;
+}
+
+
+.admin-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+
+.admin-form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+.admin-campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.admin-campo label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.admin-campo input,
+.admin-campo select,
+.admin-campo textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #cccccc;
+
+    background-color: white;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+
+.admin-campo textarea {
+    resize: vertical;
+}
+
+
+.admin-campo input:focus,
+.admin-campo select:focus,
+.admin-campo textarea:focus {
+    border-color: #111111;
+}
+
+
+.admin-campo small {
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+/* STOCK */
+
+.admin-stock {
+    padding-top: 30px;
+
+    border-top: 1px solid #dddddd;
+}
+
+
+.admin-stock h2 {
+    margin-bottom: 8px;
+
+    font-size: 20px;
+}
+
+
+.admin-stock>p {
+    margin-bottom: 25px;
+
+    color: #666666;
+
+    font-size: 14px;
+}
+
+
+.admin-stock-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.admin-imagen-actual {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.admin-imagen-actual p {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.admin-imagen-actual img {
+    width: 180px;
+    height: 220px;
+
+    object-fit: cover;
+
+    border: 1px solid #dddddd;
+}
+
+/* PEDIDOS */
+
+.admin-cliente {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.admin-cliente span {
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+/* ESTADOS DE PEDIDO */
+
+.pedido-pendiente {
+    background-color: #eeeeee;
+
+    color: #111111;
+}
+
+
+.pedido-confirmado {
+    background-color: #dddddd;
+
+    color: #111111;
+}
+
+
+.pedido-enviado {
+    background-color: #333333;
+
+    color: white;
+}
+
+
+.pedido-entregado {
+    background-color: #111111;
+
+    color: white;
+}
+
+
+.pedido-cancelado {
+    background-color: #cccccc;
+
+    color: #555555;
+
+    text-decoration: line-through;
+}
+
+/* DETALLE ADMIN DEL PEDIDO */
+
+.admin-pedido-grid {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 40px;
+
+    align-items: start;
+}
+
+
+.admin-pedido-productos,
+.admin-pedido-resumen {
+    padding: 30px;
+
+    background-color: white;
+
+    border: 1px solid #e0e0e0;
+}
+
+
+.admin-pedido-productos h2,
+.admin-pedido-resumen h2 {
+    margin-bottom: 25px;
+}
+
+
+.admin-pedido-producto {
+    display: grid;
+
+    grid-template-columns: 110px 1fr auto;
+
+    gap: 20px;
+
+    align-items: center;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.admin-pedido-producto img {
+    width: 110px;
+    height: 135px;
+
+    object-fit: cover;
+}
+
+
+.admin-pedido-producto-info h3 {
+    margin-bottom: 10px;
+}
+
+
+.admin-pedido-producto-info p {
+    margin-bottom: 6px;
+
+    color: #666666;
+
+    font-size: 14px;
+}
+
+
+.admin-pedido-subtotal {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    text-align: right;
+}
+
+
+.admin-pedido-subtotal span {
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+.admin-pedido-dato {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+.admin-pedido-dato span {
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+.admin-estado-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #dddddd;
+}
+
+
+.admin-estado-form label {
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.admin-estado-form select {
+    padding: 13px;
+
+    border: 1px solid #cccccc;
+
+    background-color: white;
+}
+
+
+.admin-pedido-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 30px;
+
+    padding-top: 25px;
+
+    border-top: 2px solid #111111;
+
+    font-size: 21px;
+}
+
+.admin-estado-final {
+    margin-top: 15px;
+
+    padding: 15px;
+
+    background-color: #eeeeee;
+
+    color: #555555;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+
+.admin-bienvenida {
+    font-size: 14px;
+}
+
+
+.admin-card p {
+    margin-top: 12px;
+
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+.admin-card-ventas {
+    grid-column: span 2;
+}
+
+
+.admin-card-ventas strong {
+    font-size: 31px;
+}
+
+
+/* CONTENIDO DEL DASHBOARD */
+
+.admin-dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2fr) minmax(300px, 1fr);
+
+    gap: 30px;
+
+    margin-top: 35px;
+
+    align-items: start;
+}
+
+
+.admin-dashboard-panel {
+    padding: 30px;
+
+    background-color: white;
+
+    border: 1px solid #e0e0e0;
+}
+
+
+.admin-dashboard-panel-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+.admin-dashboard-panel-header p {
+    margin-bottom: 5px;
+
+    color: #777777;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.admin-dashboard-panel-header h2 {
+    font-size: 22px;
+}
+
+
+.admin-dashboard-panel-header a {
+    color: #111111;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.admin-dashboard-panel-header a:hover {
+    text-decoration: underline;
+}
+
+
+/* PEDIDOS RECIENTES */
+
+.admin-pedidos-recientes {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.admin-pedido-reciente {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.admin-pedido-reciente:last-child {
+    border-bottom: none;
+}
+
+
+.admin-pedido-numero {
+    display: inline-block;
+
+    margin-bottom: 6px;
+
+    color: #111111;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.admin-pedido-numero:hover {
+    text-decoration: underline;
+}
+
+
+.admin-pedido-reciente p {
+    margin-bottom: 5px;
+
+    color: #555555;
+
+    font-size: 14px;
+}
+
+
+.admin-pedido-reciente small {
+    color: #999999;
+}
+
+
+.admin-pedido-reciente-final {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 10px;
+
+    text-align: right;
+}
+
+
+/* STOCK BAJO */
+
+.admin-stock-lista {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.admin-stock-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.admin-stock-item:last-child {
+    border-bottom: none;
+}
+
+
+.admin-stock-item div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.admin-stock-item a {
+    color: #111111;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.admin-stock-item a:hover {
+    text-decoration: underline;
+}
+
+
+.admin-stock-item span {
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+.admin-stock-item strong {
+    white-space: nowrap;
+
+    font-size: 13px;
+}
+
+
+.admin-sin-stock {
+    font-weight: bold;
+
+    text-decoration: underline;
+}
+
+
+.admin-vacio {
+    padding: 25px 0;
+
+    color: #777777;
+
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+    .admin-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    .admin-sidebar {
+        position: static;
+
+        height: auto;
+    }
+
+
+    .admin-menu {
+        margin-bottom: 30px;
+    }
+
+
+    .admin-main {
+        padding: 30px 20px;
+    }
+
+
+    .admin-cabecera {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .admin-estadisticas {
+        grid-template-columns: 1fr;
+    }
+
+
+    .admin-form-panel {
+        padding: 25px 20px;
+    }
+
+
+    .admin-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .admin-stock-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .admin-pedido-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .admin-pedido-producto {
+        grid-template-columns: 80px 1fr;
+    }
+
+
+    .admin-pedido-producto img {
+        width: 80px;
+        height: 100px;
+    }
+
+
+    .admin-pedido-subtotal {
+        grid-column: 2;
+
+        text-align: left;
+    }
+
+    .admin-card-ventas {
+        grid-column: auto;
+    }
+
+
+    .admin-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .admin-dashboard-panel {
+        padding: 22px 18px;
+    }
+
+
+    .admin-dashboard-panel-header {
+        align-items: center;
+    }
+
+
+    .admin-pedido-reciente {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .admin-pedido-reciente-final {
+        align-items: flex-start;
+
+        text-align: left;
+    }
+
+
+    .admin-stock-item {
+        align-items: flex-start;
+    }
+
+}
